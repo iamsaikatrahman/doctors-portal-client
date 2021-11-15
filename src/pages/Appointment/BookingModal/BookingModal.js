@@ -24,6 +24,7 @@ const BookingModal = ({
   name,
   time,
   date,
+  price,
   setBookingSuccess,
 }) => {
   const { user } = useAuth();
@@ -45,6 +46,7 @@ const BookingModal = ({
     const appointment = {
       ...bookingInfo,
       time,
+      price,
       serviceName: name,
       date: date.toLocaleDateString(),
     };
